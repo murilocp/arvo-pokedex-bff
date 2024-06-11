@@ -1,16 +1,10 @@
-This repository implements the BFF for a Pokédex web app.
+## Pokedex BFF
 
-## Getting Started
+This repository implements a BFF to call the Pokemon API and return only the necessary data.
 
-First, you need to install the dependencies:
+### Install
 
-```bash
-npm  install
-# or
-yarn
-```
-
-Then, run the development server:
+To install the project run this command:
 
 ```bash
 npm  install
@@ -18,10 +12,10 @@ npm  install
 yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Configuration
 
-## Environment variables
+You must configure a `.env` file and add a `PORT` variable. There is an example that should help with the configuration.
 
-In order to run the application correctly, you need to add an environment variable with the name `BFF_URL`.
+### Example
 
-There is an example to help you inside `.env.example`
+If you are running in the port 8000, just open [http://localhost:8000/pokemon/pikachu](http://localhost:8000/pokemon/pikachu) in your browser to test if the BFF is working.
