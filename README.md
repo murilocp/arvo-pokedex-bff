@@ -14,7 +14,19 @@ yarn
 
 ### Configuration
 
-You must configure a `.env` file and add a `PORT` variable. There is an example that should help with the configuration.
+In order to run the application correctly, you need to add an environment variable with the name `PORT`.
+
+There is an example to help you inside `.env.example`
+
+### Running
+
+Run the development server with this command:
+
+```bash
+npm  start
+# or
+yarn start
+```
 
 ### Example
 
