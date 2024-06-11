@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import apiResponse from '../services/api';
 import { PokemonAPIResponse, PokemonInfoResponse } from '../types/Pokemon';
 import { pokemonCache } from '../middleware';
-import { capitalize } from '../helpers';
+import { POKEMON_API, capitalize } from '../helpers';
 import { isAxiosError } from 'axios';
 
 export const pokemonController = async (
@@ -15,7 +15,7 @@ export const pokemonController = async (
     const { pokemonName } = req.params;
 
     const { data, success, error } = await apiResponse<PokemonAPIResponse>(
-      `${process.env.POKEMON_API}${pokemonName}`,
+      `${POKEMON_API}${pokemonName}`,
     );
 
     if (success && data) {

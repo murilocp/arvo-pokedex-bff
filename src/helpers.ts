@@ -4,3 +4,5 @@ export const capitalize = (str: string): string => {
 
   return `${firstLetter.toUpperCase()}${rest.toLowerCase()}`;
 };
+
+export const POKEMON_API = 'https://pokeapi.co/api/v2/pokemon/';
