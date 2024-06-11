@@ -37,7 +37,6 @@ export const pokemonController = async (
       res.send(returnData);
       res.status(200);
     } else {
-      console.log({ error: error?.response });
       res.status(error?.response?.status || 500);
       res.send({ error: 'Pokémon not found!' });
     }

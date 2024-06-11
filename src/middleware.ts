@@ -1,6 +1,7 @@
 import { isAxiosError } from 'axios';
 import { Request, Response, NextFunction } from 'express';
 import Cache from 'node-cache';
+
 export const pokemonCache = new Cache({ stdTTL: 60 * 5 });
 
 export const pokemonCacheMiddleware = (
