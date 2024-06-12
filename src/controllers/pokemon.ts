@@ -26,7 +26,7 @@ export const pokemonController = async (
         name: capitalize(data.name),
         abilities: data.abilities.map(item => capitalize(item.ability.name)),
         types: data.types.map(typeItem => capitalize(typeItem.type.name)),
-        image: data.sprites.other.dream_world.front_default,
+        image: data.sprites.other['official-artwork'].front_default,
         stats: data.stats.map(stat => ({
           label: capitalize(stat.stat.name),
           value: stat.base_stat,
