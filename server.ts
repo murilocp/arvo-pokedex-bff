@@ -11,15 +11,6 @@ const PORT = process.env.PORT;
 
 app.use('/', router);
 
-app.use((err: ErrorRequestHandler, _req: Request, res: Response) => {
-  console.error(err);
-
-  res.status(500).json({
-    status: 'fail',
-    message: 'Something went wrong',
-  });
-});
-
 app.all('*', (_req, res) => {
   res.status(404).send({ message: 'Path not found!' });
 });
